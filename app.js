@@ -161,7 +161,7 @@ app.post("/home", (req, res) => {
   }
 });
 
-app.post("/search", (req, res) => {
+app.post("/search" , (req, res) => {
   Patient.findOne({ patientId: req.body.patientId }).then((userData) => {
     if (userData) {
       res.render("searchResults", {
